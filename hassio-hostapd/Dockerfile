@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV LANG C.UTF-8
 
 # Install requirements for add-on
-RUN apk update && apk add --no-cache bash jq iw linux-firmware-other 
+RUN apk update
 
 COPY hostapd.conf /
 COPY udhcpd.conf /etc/udhcpd.conf
